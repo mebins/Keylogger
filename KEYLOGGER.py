@@ -76,7 +76,7 @@ def tokenize(key):
         wpm_time += delta_time
 
         wpm_cycled = math.floor(wpm_time)/60
-
+        token = token.lower()
         if wpm_cycled >= 1:
             if word_count > 120 :
                 print(" WPM STATS: " + str(word_count/wpm_cycled))
@@ -87,7 +87,7 @@ def tokenize(key):
         else:
             word[token] = 1
             
-        write_file(token)
+        #write_file(token)
         print(token + " : " + str(word[token]))
 
         print("WORD COUNT: "+ str( word_count) + " TIME: " + str(wpm_time) +
